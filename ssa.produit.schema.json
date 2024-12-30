@@ -1,0 +1,112 @@
+{
+    "$id": "https://github.com/betagouv/seves-schemas/ssa.produit.schema.json",
+    "$schema": "https://github.com/betagouv/seves-schemas/ssa.produit.schema.json",
+    "description": "Schema d'une fiche produit dans Sèves - SSA ",
+    "type": "object",
+    "properties": {
+        "fiche_numero": {
+            "description": "Numéro de la fiche",
+            "type": "string",
+            "pattern": "AAAA-[\\d]4",
+            "$comment": "Incrémentation automatique d'un n° de fiche du type XXXX.YYYYY où XXXX est l'année en cours et YYYYY est un n° à 5 chiffres (mais qui ne peut pas être commun avec un n° RASFF car les n° RASFF sont à 4 chiffres)"
+        },
+        "fiche_createur": {
+            "description": "Structure à laquelle appartien l'utilisateur créateur",
+            "$ref": "https://github.com/betagouv/seves-schemas/structure.schema.json"
+        },
+        "fiche_date_creation": {
+            "description": "Date de création",
+            "type": "string",
+            "format": "date"
+        },
+        "fiche_type": {
+            "description": "Type de fiche",
+            "type": "string",
+            "enum": [
+                "Alerte produit locale",
+                "Alerte produit nationale",
+                "Non alerte - Non conforme MM",
+                "Non alerte - Dangereux sans MM",
+                "RASFF",
+                "Autre",
+                "Gestion produit - SA",
+                "Gestion produit - SV",
+                "Dépassement d'une valeur de référence"
+            ],
+            "$comment": "* Demande d'ajout de <Dépassement d'une valeur de référence> la part du BAMRA car certains évènements font l'objet de suites pour motif du dépassement d'une valeur de référence, mais le produit est conforme et il n'y a pas lieu de faire un retrait. Ex : Acrylamide dans des chips."
+        },
+        "fiche_source": {
+            "description": "Source de l'alerte",
+            "type": "string",
+            "enum": [
+                "Source",
+                "Autocontrôle",
+                "RASFF",
+                "Prélèvement PSPC",
+                "Prélèvement SIVEP",
+                "Autre prélèvement officiel",
+                "Autre constat officiel",
+                "Autre évènement"
+            ],
+            "$comment": "A faire valider par les bureaux métiers ? L'item SORA Alerte <suspicion de TIAC> a été supprimé"
+        },
+        "fiche_rasff": {
+            "description": "Numéro RASFF",
+            "type": "string",
+            "pattern": "AAAA-[\\d]4",
+            "$comment": "Ce descripteur n'est pas nécessaire si on choisit le type de fiche RASFF"
+        },
+        "produit_denomination": {
+            "description": "Dénomination",
+            "type": "string"
+        },
+        "produit_description": {
+            "description": "Description produit et emballage",
+            "type": "string",
+            "$comment": "Est attendu dans ce champs descripteur, les items suivants : marque, type/n° de référence du modèle, n° de lot (s), DLC ou DDM, description lot d'origine, etc…   Inciter à la saisie des informations en les suggérant"
+        },
+        "produit_categorie": {
+            "description": "Catégorie du produit",
+            "type": "string",
+            "$comment": "TODO: intégrer la hierarchie catégorie / produit"
+        },
+        "produit_produit": {
+            "description": "Produit",
+            "type": "string",
+            "$comment": "TODO: intégrer la hierarchie catégorie / produit"
+        },
+        "produit_dlc_depasse": {
+            "description": "Est-ce que tous les produits ont une DLC dépassé?",
+            "type": "boolean"
+        },
+        "produit_duree_vie": {
+            "description": "Durée de vie du produit",
+            "type": "string",
+            "enum": [
+                "DLC",
+                "DDM",
+                "Sans durée de vie",
+                "Autre"
+            ],
+            "$comment": "+ Champs libre pour ajouter la date"
+        },
+        "produit_etat": {
+            "description": "Etat du produit",
+            "type": "string",
+            "enum": [
+                "réfrigéré",
+                "surgelé",
+                "température ambiante"
+            ],
+            "$comment": "+ Champs libre pour ajouter la date"
+        },
+        "quantites": {
+            "description": "Quantités (préciser : reçues ou produites / en stock / vendues / retirées)",
+            "type": "string"
+        }
+    }
+}
+
+
+
+
