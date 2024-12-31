@@ -1,0 +1,7 @@
+{
+    "$id": "https://github.com/betagouv/seves-schemas/ssa.etablissement.schema.json",
+    "$schema": "https://github.com/betagouv/seves-schemas/ssa.etablissement.schema.json",
+    "description": "Schema d'un établissement dans Sèves - SSA ",
+    "type": "object",
+    "properties": {}
+}
