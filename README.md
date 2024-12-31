@@ -2,8 +2,8 @@
 
 **Liste des schémas de données**
 
--[SSA - Fiche Produit](./ssa.produit.schema.json)
--[SSA - Etablissement](./ssa.etablissement.schema.json)
+- [SSA - Fiche Produit](./ssa.produit.schema.json)
+- [SSA - Etablissement](./ssa.etablissement.schema.json)
 
 **TODO**
 - Fiche produit - Catégorie de produit et produit
