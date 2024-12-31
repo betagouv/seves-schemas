@@ -100,13 +100,65 @@
             ],
             "$comment": "+ Champs libre pour ajouter la date"
         },
-        "quantites": {
+        "produit_quantites": {
             "description": "Quantités (préciser : reçues ou produites / en stock / vendues / retirées)",
             "type": "string"
+        },
+        "risques_description": {
+            "description": "Description",
+            "type": "string"
+        },
+        "risques_resultat_analytique": {
+            "description": "Résultat analytique",
+            "type": "string",
+            "$comment": "+ Unités"
+        },
+        "risques_resultat_analytique_unité": {
+            "description": "Résultat analytique - unités",
+            "type": "string",
+            "enum": [
+                "%",
+                "/0,01g",
+                "/100g",
+                "/10g",
+                "/250g",
+                "/250ml",
+                "/25g",
+                "/50g",
+                "/g",
+                "/kg",
+                "/mg",
+                "/ml",
+                "Aw",
+                "BQ/kg",
+                "UFC/100g",
+                "UFC/g",
+                "UFC/ml",
+                "MPN/100g"
+            ]
+        },
+        "risques_victimes": {
+            "description": "Victimes",
+            "type": "string",
+            "$comment": "Prévoir une liaison avec les fiches de l'environnement TIAC/Cas humains mais ne pas garder ce descripteur dans la fiche SSA (à confirmer)"
+        },
+        "risques_evaluation": {
+            "description": "Evaluation du risque par le professionnel",
+            "type": "string"
+        },
+        "risques_analyse": {
+            "description": "Analyse du risque",
+            "type": "string"
+        },
+        "risques_type": {
+            "description": "Type de risque",
+            "type": "string",
+            "$comment": "TODO: Vérifier la compatibilité avec SSD2 (dans une seconde version de SEVES)  A faire valider par les bureaux métiers (BETD, BAMRA, BEPIAS, BPMED, BPRSE, BEAD, BIB)  Voir l'onglet Risques"
+        },
+        "risques_risque": {
+            "description": "Risque",
+            "type": "string",
+            "$comment": "TODO: Vérifier la compatibilité avec SSD2 (dans une seconde version de SEVES)  A faire valider par les bureaux métiers (BETD, BAMRA, BEPIAS, BPMED, BPRSE, BEAD, BIB)  Voir l'onglet Risques"
         }
     }
 }
-
-
-
-
