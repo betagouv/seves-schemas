@@ -1,6 +1,7 @@
 # seves-schemas
 
-Schéma de données de Sèves:
+**Liste des schémas de données**
+
 -[SSA - Fiche Produit](./ssa.produit.schema.json)
 -[SSA - Etablissement](./ssa.etablissement.schema.json)
 
