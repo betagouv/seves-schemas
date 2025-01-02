@@ -65,15 +65,315 @@
             "type": "string",
             "$comment": "Est attendu dans ce champs descripteur, les items suivants : marque, type/n° de référence du modèle, n° de lot (s), DLC ou DDM, description lot d'origine, etc…   Inciter à la saisie des informations en les suggérant"
         },
-        "produit_categorie": {
-            "description": "Catégorie du produit",
-            "type": "string",
-            "$comment": "TODO: intégrer la hierarchie catégorie / produit"
+        "produit_categorie_": {
+            "description": "Fruits et légumes",
+            "type": "boolean"
         },
-        "produit_produit": {
-            "description": "Produit",
+        "": {
+            "description": "",
             "type": "string",
-            "$comment": "TODO: intégrer la hierarchie catégorie / produit"
+            "enum": [
+                "Fruits, légumes et champignons frais",
+                "Fruits, légumes et champignons transformés (hors jus et sauces)",
+                "Tubercules et dérivés (purée, frites, chips)"
+            ]
+        },
+        "produit_categorie_": {
+            "description": "Noix et graines",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Oléagineux, fruits à coque, autres graines et dérivés (hors huiles)"
+            ]
+        },
+        "produit_categorie_": {
+            "description": "Céréales et produits de la boulangerie",
+            "type": "boolean"
+        },
+        "produit_categorie_": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Céréales entières ou moulues (y compris les pâtes et vermicelles)",
+                "Pains et vienoiseries"
+            ]
+        },
+        "produit_categorie_": {
+            "description": "Fruits et légumes",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Légumineuses (lentilles, pois, fèves) et dérivés"
+            ]
+        },
+        "produit_categorie_": {
+            "description": "Produit carné",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Viande et abat rouge de boucherie",
+                "Viande hachée de boucherie",
+                "VSM de boucherie",
+                "Abat blanc de boucherie",
+                "PV de boucherie",
+                "PABV de boucherie cru",
+                "PABV de boucherie cuit",
+                "Viande et abat de volaille",
+                "Viande hachée de volailles",
+                "VSM de volailles",
+                "PV de volaille",
+                "PABV de volailles",
+                "Viande et produit de gibier",
+                "Viande et produit de lapin"
+            ]
+        },
+        "produit_categorie_": {
+            "description": "Produit de la pêche",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Poisson entier ou fileté",
+                "Poisson fumé salé ou mariné",
+                "Céphalopode et produit de céphalopode",
+                "Coquillage vivant ou cuit",
+                "Crustacé et produit de crustacés",
+                "Conserves",
+                "Escargot et produit de e.",
+                "Grenouille et produit de g."
+            ]
+        },
+        "produit_categorie_": {
+            "description": "Œuf et ovoproduit",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Œuf scoquille",
+                "Ovoproduit (coule d'œuf, poudre d'œuf, de blanc)"
+            ]
+        },
+        "produit_categorie_produit_laitier": {
+            "description": "Catégorie - Produit laitier",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Laits (cru, pasteurisé, microfilté, stérilisé, thermisé)",
+                "Poudre de lait (hors 1er âge)",
+                "Yaourt et produits laitiers fermentés (sucré ou non;  y compris fromage blanc et faisselle)",
+                "Fromage lait cru / pâtes pressées non cuites",
+                "Fromage lait cru / pâtes molles et autres",
+                " Fromage lait pasteurisé ou microfiltré",
+                "Fromage autre (sauf fromage blanc et faisselle)",
+                "Crème et beurre"
+            ]
+        },
+        "produit_categorie_produit_ruche": {
+            "description": "Catégorie - Produit de la ruche",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Miel et produit de la ruche"
+            ]
+        },
+        "produit_categorie_autre_produit_animaux": {
+            "description": "Catégorie - Autres produits animaux",
+            "type": "boolean"
+        },
+        "": {
+            "description": "Autres produits animaux",
+            "type": "string",
+            "enum": [
+                "Collagène",
+                "Gélatine",
+                "Graisse et fonte DOA (sauf beurre et crème)",
+                "Autres produits raffinés DOA"
+            ]
+        },
+        "produit_categorie_graisse_huile": {
+            "description": "Catégorie - Graisse et huile",
+            "type": "boolean"
+        },
+        "produit_produit_graisse_huile": {
+            "description": "Graisse et huile",
+            "type": "string",
+            "enum": [
+                "Graisse et huile DOV"
+            ]
+        },
+        "produit_categorie_produit_sucres": {
+            "description": "Catégorie - Produits sucrés",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Confiseries (y compris chewing gum) ",
+                "Glace et sorbet",
+                "Desserts frais, lactés (hors yaourt) fruités (hors compote) ou pâtissiers",
+                "Desserts secs (biscuits, cakes sucrés, madeleines, produits petit-dejeuner, snack sucrés)",
+                "Chocolats"
+            ]
+        },
+        "produit_categorie_herbes_condiments_sauces": {
+            "description": "Catégorie - Herbes, condiments, sauces",
+            "type": "boolean"
+        },
+        "": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "Bouillons, condiments (moutarde,sel, vinaigre et vinaigrettes),  sauces (mayonaise,pesto,tomates) ",
+                "Fines herbes et épices"
+            ]
+        },
+        "produit_categorie_plat_cuisine_compose": {
+            "description": "Catégorie - Plat cuisiné et composé",
+            "type": "boolean"
+        },
+        "produit_produit_plat_cuisine_compose": {
+            "description": "Produit - Plat cuisiné et composé",
+            "type": "string",
+            "enum": [
+                "Plat cuisiné et soupe composée (hors soupe de légumes/fruits/champignons)",
+                "Salade composée"
+            ]
+        },
+        "produit_categorie_produits_sales": {
+            "description": "Catégorie - Produits salés",
+            "type": "boolean"
+        },
+        "produit_produit_produits_sales": {
+            "description": "Produit - Produits salés",
+            "type": "string",
+            "enum": [
+                "Biscuit, cakes, snacks salés  (hors chips ou noix/graines)"
+            ]
+        },
+        "produit_categorie_analogue_vegetaux": {
+            "description": "Catégorie - Analogues végétaux",
+            "type": "boolean"
+        },
+        "produit_produit_analogue_vegetaux": {
+            "description": "Produit - Analogues végétaux",
+            "type": "string",
+            "enum": [
+                "Subtituts végétaux de produits laitiers (y compris les boissons végétales)",
+                "Subtituts végétaux de produits carnés",
+                "Subtituts végétaux de produits de la mer"
+            ]
+        },
+        "produit_categorie_boissons_hors_soupes_laits_substituts": {
+            "description": "Catégorie - Boissons (hors soupes, laits et substituts)",
+            "type": "boolean"
+        },
+        "produit_produit_boissons_hors_soupes_laits_substituts": {
+            "description": "Produit -  Boissons (hors soupes, laits et substituts)",
+            "type": "string",
+            "enum": [
+                "Boissons alcoolisées (dont vin)",
+                "Autres boissons non alcoolisées (y compris Kombucha)",
+                "Jus de fruits ou légumes",
+                "Préparations pour boissons chaudes (Chocolatés, café, thé, tisanes)",
+                "Préparations pour boissons froides (sirop, base à sodas)",
+                "Eaux minérales et naturelles",
+                "Eaux aromatisées",
+                "Eau potable autre"
+            ]
+        },
+        "produit_categorie_alimentation_dietetique": {
+            "description": "Catégrie - Alimentation diététique",
+            "type": "boolean"
+        },
+        "produit_produit_alimentation_dietetique": {
+            "description": "Produit - Alimentation diététique",
+            "type": "string",
+            "enum": [
+                "Complément alimentaire",
+                "Substitut de repas, repas hyperprotéiné"
+            ]
+        },
+        "produit_categorie_alimentation_nourisson": {
+            "description": "Catégorie - Alimentation pour nourisson",
+            "type": "boolean"
+        },
+        "produit_produit_alimentation_nourisson": {
+            "description": "Produit - Alimentation pour nourisson",
+            "type": "string",
+            "enum": [
+                "Lait 1er âge",
+                "Autre aliment pour nourrisson"
+            ]
+        },
+        "produit_categorie_additif": {
+            "description": "Catégorie - Additif",
+            "type": "boolean"
+        },
+        "produit_produit_additif": {
+            "description": "Produit - Additif",
+            "type": "string",
+            "enum": [
+                "Additif alimentaire"
+            ]
+        },
+        "produit_categorie_alimentation_animale": {
+            "description": "Catégorie - Alimentation animale",
+            "type": "boolean"
+        },
+        "produit_produit_alimentation_animale": {
+            "description": "Produit - Alimentation animale",
+            "type": "string",
+            "enum": [
+                "Additifs et pré-mélanges pour animaux",
+                "Aliment composé pour animaux",
+                "Matière première végétale pour animaux",
+                "Petfood",
+                "Autre aliment pour animaux"
+            ]
+        },
+        "produit_categorie_autre_produit": {
+            "description": "Catégorie - Autre produit",
+            "type": "boolean"
+        },
+        "produit_produit_autre_produit": {
+            "description": "Produit - Autre produit",
+            "type": "string",
+            "enum": [
+                "Sous produits animaux",
+                "Autre produit non alimentaire",
+                "Produits indéterminés"
+            ]
+        },
+        "produit_categorie_sans_objet": {
+            "description": "Catégorie - Sans objet",
+            "type": "boolean"
+        },
+        "produit_produit_sans_objet": {
+            "description": "Produit - Sans objet",
+            "type": "string",
+            "enum": [
+                "Sans objet"
+            ]
         },
         "produit_dlc_depasse": {
             "description": "Est-ce que tous les produits ont une DLC dépassé?",
@@ -150,15 +450,234 @@
             "description": "Analyse du risque",
             "type": "string"
         },
-        "risques_type": {
-            "description": "Type de risque",
-            "type": "string",
-            "$comment": "TODO: Vérifier la compatibilité avec SSD2 (dans une seconde version de SEVES)  A faire valider par les bureaux métiers (BETD, BAMRA, BEPIAS, BPMED, BPRSE, BEAD, BIB)  Voir l'onglet Risques"
+        "risques_type_autre": {
+            "description": "Type de risque - Autre",
+            "type": "boolean"
         },
-        "risques_risque": {
-            "description": "Risque",
+        "risques_risque_autre": {
+            "description": "Risque - Autre",
             "type": "string",
-            "$comment": "TODO: Vérifier la compatibilité avec SSD2 (dans une seconde version de SEVES)  A faire valider par les bureaux métiers (BETD, BAMRA, BEPIAS, BPMED, BPRSE, BEAD, BIB)  Voir l'onglet Risques"
+            "enum": [
+                "Y - Autre risque : préciser",
+                "Y - Autre risque : préciser"
+            ]
+        },
+        "risques_type_biotoxines": {
+            "description": "Type de risque - Biotoxines",
+            "type": "boolean"
+        },
+        "risques_risque_biotoxines": {
+            "description": "Risque - Biotoxines",
+            "type": "string",
+            "enum": [
+                "BT - Aflatoxines",
+                "BT - Datura (alcaloïdes tropaniques)",
+                "BT - DSP (toxines lipophiles)",
+                "BT - Histamine",
+                "BT - Ochratoxine A",
+                "BT - Patuline",
+                "BT - Toxine ASP",
+                "BT - Toxine staphylococcique",
+                "BT - Toxine T2 HT2",
+                "BT - Autre biotoxine"
+            ],
+            "$comment": "BAMRA, BPMED, BETD"
+        },
+        "risques_type_contaminants_chimiques": {
+            "description": "Type de risque - Contaminants chimiques",
+            "type": "boolean"
+        },
+        "risques_risque_contaminants_chimiques": {
+            "description": "Risque - Contaminants chimiques",
+            "type": "string",
+            "enum": [
+                "C - 3MCPD et esters",
+                "C - Acrylamide",
+                "C - Cd Pb As Hg ",
+                "C - Dioxine PCB (polluants organiques)",
+                "C - Furanes",
+                "C - HAP et AAH",
+                "C - Nitrites",
+                "C - Nitrosamine",
+                "C - Radionucléides",
+                "C - Sulfites",
+                "C - Autre élément trace métallique",
+                "C - Autre additif",
+                "C - Autre contaminant chimique"
+            ],
+            "$comment": "BAMRA"
+        },
+        "risques_type_defaut_composition_etiquetage": {
+            "description": "Type de risque - Défaut de composition ou d'étiquetage",
+            "type": "boolean"
+        },
+        "risques_risque__defaut_composition_etiquetage": {
+            "description": "Risque - Défaut de composition ou d'étiquetage",
+            "type": "string",
+            "enum": [
+                "A - Arachide",
+                "A - Céleri",
+                "A - Crustacés",
+                "A - Lupin",
+                "A - Moutarde",
+                "A - Poisson",
+                "A - Sésame",
+                "A - Soja",
+                "C - Sulfites",
+                "A - Autre allergène"
+            ],
+            "$comment": "BETD, BEAD, BPMED, BEPIAS selon produit concerné"
+        },
+        "risques_type_defaut_conditionnement": {
+            "description": "Type de risque - Défaut du conditionnement",
+            "type": "boolean"
+        },
+        "risques_risque_defaut_conditionnement": {
+            "description": "Risque - Défaut du conditionnement",
+            "type": "string",
+            "enum": [
+                "M - Cobalt",
+                "M - Formaldéhyde",
+                "M - Mélamine",
+                "M - Perturbateurs endocriniens",
+                "M - Phtalates",
+                "M - Autre défaut MCDA"
+            ],
+            "$comment": "BAMRA"
+        },
+        "risques_type_denrée_non_autorisee": {
+            "description": "Type de risque - Denrée non autorisée",
+            "type": "boolean"
+        },
+        "risques_risque_denrée_non_autorisee": {
+            "description": "Risque - Denrée non autorisée",
+            "type": "string",
+            "enum": [
+                "N - Novel food",
+                "N - OGM"
+            ],
+            "$comment": "BEPIAS"
+        },
+        "risques_type_eléments_indésirables": {
+            "description": "Type de risque - Eléments indésirables",
+            "type": "boolean"
+        },
+        "risques_risque_eléments_indésirables": {
+            "description": "Risque - Eléments indésirables",
+            "type": "string",
+            "enum": [
+                "I - Corps étrangers",
+                "I - Anisakis",
+                "I - Insectes",
+                "I - Toxoplasma",
+                "I - Trichine",
+                "I - Autre parasite : préciser",
+                "I - Autre indésirable : préciser"
+            ],
+            "$comment": "BPMED, BEAD"
+        },
+        "risques_type_microbiologiques": {
+            "description": "Type de risque - Microbiologiques",
+            "type": "boolean"
+        },
+        "risques_risque_microbiologiques": {
+            "description": "Risque - Microbiologiques",
+            "type": "string",
+            "enum": [
+                "B - Bacillus anthracis",
+                "B - Bacillus cereus",
+                "B - Brucella",
+                "B - Campylobacter",
+                "B - Clostridium botulinum",
+                "B - Clostridium perfringens",
+                "B - Coliformes",
+                "B - Coxiella burnetii (fièvre Q)",
+                "B - Cronobacter",
+                "B - EHEC (STEC)",
+                "B - Entérobactéries",
+                "B - Escherichia coli (non EHEC)",
+                "B - Leptospira",
+                "B - Listeria monocytogenes",
+                "B - Listeria spp",
+                "B - Mycobacterium spp",
+                "B - Salmonella autre : préciser",
+                "B - Salmonella enteritidis",
+                "B - Salmonella hadar",
+                "B - Salmonella infantis",
+                "B - Salmonella kentucky",
+                "B - Salmonella typhimurium",
+                "B - Salmonella virchow",
+                "B - Shigella",
+                "B - Staphylococcus aureus",
+                "B - Yersinia",
+                "BL - Levures moisissures",
+                "BT - Toxine staphylococcique",
+                "BV - Flavivirus (TBE)",
+                "BV - Hépatite A",
+                "BV - Hépatite E",
+                "BV - Norovirus / virus de GEA",
+                "BV - Vibrio",
+                "BV - Virus rabique",
+                "BV - Autre virus",
+                "B - Autre bactérie"
+            ],
+            "$comment": "BETD, BAMRA, BPMED"
+        },
+        "risques_type_problème_conservation": {
+            "description": "Type de risque - Problème de conservation",
+            "type": "boolean"
+        },
+        "risques_risque_problème_conservation": {
+            "description": "Risque - Problème de conservation",
+            "type": "string",
+            "enum": [
+                "A - Erreur de DLC",
+                "P - Défaut de stérilisation",
+                "P - Défaut d'herméticité",
+                "P - Problème organoleptique"
+            ],
+            "$comment": "BETD, BPMED"
+        },
+        "risques_type_residus_chimiques": {
+            "description": "Type de risque - Résidus chimiques",
+            "type": "boolean"
+        },
+        "risques_risque_residus_chimiques": {
+            "description": "Risque - Résidus chimiques",
+            "type": "string",
+            "enum": [
+                "R - Résidus de médicament vétérinaire",
+                "R - Pesticides / biocides",
+                "R - Résidus d'auxilliaire technologique"
+            ],
+            "$comment": "BGIR, BEAD, BPRSE, BGIR, Marie Collard, BAMRA, BIB, BEPIAS"
+        },
+        "risques_type_sans_objet": {
+            "description": "Type de risque - Sans objet",
+            "type": "boolean"
+        },
+        "risques_risque_sans_objet": {
+            "description": "Risque - Sans objet",
+            "type": "string",
+            "enum": [
+                "Z - Sans objet"
+            ]
+        },
+        "risques_type_sante_animale_sans_risque_ssa": {
+            "description": "Type de risque - Santé animale - sans risque SSA",
+            "type": "boolean"
+        },
+        "risques_risque_sante_animale_sans_risque_ssa": {
+            "description": "Risque - Santé animale - sans risque SSA",
+            "type": "string",
+            "enum": [
+                "SA - Autre",
+                "SA - FA",
+                "SA - IAHP",
+                "SA - PPA",
+                "SA - Rage",
+                "SV"
+            ]
         }
     }
 }
