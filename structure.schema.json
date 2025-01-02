@@ -1,7 +1,20 @@
 {
-    "$id": "https://github.com/betagouv/seves-schemas/ssa.etablissement.schema.json",
-    "$schema": "https://github.com/betagouv/seves-schemas/ssa.etablissement.schema.json",
-    "description": "Schema d'un établissement dans Sèves - SSA ",
+    "$id": "https://github.com/betagouv/seves-schemas/ssa.structure.schema.json",
+    "$schema": "https://github.com/betagouv/seves-schemas/ssa.structure.schema.json",
+    "description": "Schema d'une structure utilisatrice dans Sèves ",
     "type": "object",
-    "properties": {}
+    "properties": {
+        "niveau1": {
+            "description": "Niveau 1",
+            "type": "string"
+        },
+        "niveau2": {
+            "description": "Niveau 2",
+            "type": "string"
+        },
+        "libelle": {
+            "description": "Nom de la structure",
+            "type": "string"
+        }
+    }
 }
