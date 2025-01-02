@@ -65,59 +65,49 @@
             "type": "string",
             "$comment": "Est attendu dans ce champs descripteur, les items suivants : marque, type/n° de référence du modèle, n° de lot (s), DLC ou DDM, description lot d'origine, etc…   Inciter à la saisie des informations en les suggérant"
         },
-        "produit_categorie_": {
-            "description": "Fruits et légumes",
+        "produit_categorie_fruits_legumes": {
+            "description": "Catégorie - Fruits et légumes",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_fruits_legumes": {
+            "description": "Produit - Fruits et légumes",
             "type": "string",
             "enum": [
                 "Fruits, légumes et champignons frais",
                 "Fruits, légumes et champignons transformés (hors jus et sauces)",
-                "Tubercules et dérivés (purée, frites, chips)"
+                "Tubercules et dérivés (purée, frites, chips)",
+                "Légumineuses (lentilles, pois, fèves) et dérivés"
             ]
         },
-        "produit_categorie_": {
-            "description": "Noix et graines",
+        "produit_categorie_noix_graines": {
+            "description": "Catégorie - Noix et graines",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_noix_graines": {
+            "description": "Produit - Noix et graines",
             "type": "string",
             "enum": [
                 "Oléagineux, fruits à coque, autres graines et dérivés (hors huiles)"
             ]
         },
-        "produit_categorie_": {
-            "description": "Céréales et produits de la boulangerie",
+        "produit_categorie_cereales_produit_de_boulangerie": {
+            "description": "Catégorie - Céréales et produits de la boulangerie",
             "type": "boolean"
         },
-        "produit_categorie_": {
-            "description": "",
+        "produit_produit_cereales_produit_de_boulangerie": {
+            "description": "Produit - Céréales et produits de la boulangerie",
             "type": "string",
             "enum": [
                 "Céréales entières ou moulues (y compris les pâtes et vermicelles)",
                 "Pains et vienoiseries"
             ]
         },
-        "produit_categorie_": {
-            "description": "Fruits et légumes",
+        "produit_categorie_produit_carne": {
+            "description": "Catégorie - Produit carné",
             "type": "boolean"
         },
-        "": {
-            "description": "",
-            "type": "string",
-            "enum": [
-                "Légumineuses (lentilles, pois, fèves) et dérivés"
-            ]
-        },
-        "produit_categorie_": {
-            "description": "Produit carné",
-            "type": "boolean"
-        },
-        "": {
-            "description": "",
+        "produit_produit_produit_carne": {
+            "description": "Produit - Produit carné",
             "type": "string",
             "enum": [
                 "Viande et abat rouge de boucherie",
@@ -136,12 +126,12 @@
                 "Viande et produit de lapin"
             ]
         },
-        "produit_categorie_": {
-            "description": "Produit de la pêche",
+        "produit_categorie_produit_peche": {
+            "description": "Catégorie - Produit de la pêche",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_produit_peche": {
+            "description": "Produit - Produit de la pêche",
             "type": "string",
             "enum": [
                 "Poisson entier ou fileté",
@@ -154,12 +144,12 @@
                 "Grenouille et produit de g."
             ]
         },
-        "produit_categorie_": {
-            "description": "Œuf et ovoproduit",
+        "produit_categorie_oeuf_ovoproduit": {
+            "description": "Catégorie - Œuf et ovoproduit",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_oeuf_ovoproduit": {
+            "description": "Produit - Œuf et ovoproduit",
             "type": "string",
             "enum": [
                 "Œuf scoquille",
@@ -170,8 +160,8 @@
             "description": "Catégorie - Produit laitier",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_produit_laitier": {
+            "description": "Produit - Produit laitier",
             "type": "string",
             "enum": [
                 "Laits (cru, pasteurisé, microfilté, stérilisé, thermisé)",
@@ -188,8 +178,8 @@
             "description": "Catégorie - Produit de la ruche",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_produit_ruche": {
+            "description": "Produit - Produit de la ruche",
             "type": "string",
             "enum": [
                 "Miel et produit de la ruche"
@@ -199,8 +189,8 @@
             "description": "Catégorie - Autres produits animaux",
             "type": "boolean"
         },
-        "": {
-            "description": "Autres produits animaux",
+        "produit_produit_autre_produit_animaux": {
+            "description": "Produit - Autres produits animaux",
             "type": "string",
             "enum": [
                 "Collagène",
@@ -214,7 +204,7 @@
             "type": "boolean"
         },
         "produit_produit_graisse_huile": {
-            "description": "Graisse et huile",
+            "description": "Produit - Graisse et huile",
             "type": "string",
             "enum": [
                 "Graisse et huile DOV"
@@ -224,8 +214,8 @@
             "description": "Catégorie - Produits sucrés",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_produit_sucres": {
+            "description": "Produit - Produits sucrés",
             "type": "string",
             "enum": [
                 "Confiseries (y compris chewing gum) ",
@@ -239,8 +229,8 @@
             "description": "Catégorie - Herbes, condiments, sauces",
             "type": "boolean"
         },
-        "": {
-            "description": "",
+        "produit_produit_herbes_condiments_sauces": {
+            "description": "Produit - Herbes, condiments, sauces",
             "type": "string",
             "enum": [
                 "Bouillons, condiments (moutarde,sel, vinaigre et vinaigrettes),  sauces (mayonaise,pesto,tomates) ",
