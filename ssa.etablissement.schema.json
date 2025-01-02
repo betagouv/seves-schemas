@@ -3,5 +3,57 @@
     "$schema": "https://github.com/betagouv/seves-schemas/ssa.etablissement.schema.json",
     "description": "Schema d'un établissement dans Sèves - SSA ",
     "type": "object",
-    "properties": {}
+    "properties": {
+        "etablissement": {
+            "description": "Etablissement (nom, activité, pays)",
+            "type": "string",
+            "$comment": "Cette table pourra être Interfacée avec RESYTAL USAGERS"
+        },
+        "pays_destination": {
+            "description": "Pays de destination",
+            "type": "string",
+            "$comment": "Descripteur souhaité d'après le CR de l'atelier Pays Etablissement (conduit en présence des collègues MUS) : doit on le maintenir dans l'environnement SV ?"
+        },
+        "raison_sociale": {
+            "description": "Raison sociale - Enseigne",
+            "type": "string"
+        },
+        "identifiant": {
+            "description": "N° agrément, SIRET et/ou Autre identifiant",
+            "type": "string"
+        },
+        "type_exploitant": {
+            "description": "Type d'exploitant",
+            "type": "string",
+            "enum": [
+                "Producteur primaire",
+                "Hotellerie/restauration/café",
+                "Restauration collective",
+                "Autre détaillant",
+                "Producteur/fabricant (hors restauration)",
+                "Autre entrepôt",
+                "Conditionneur/emballeur",
+                "Plateforme de distribution",
+                "Tranporteur",
+                "Négociant",
+                "Site de vente en ligne ",
+                "Expéditeur/fournisseur hors UE",
+                "Importateur UE de pays tiers",
+                "Exportateur UE vers pays tiers",
+                "Autre : préciser",
+                "Sans objet"
+            ]
+        },
+        "position": {
+            "description": "Position dans le dossier",
+            "type": "string",
+            "enum": [
+                "Détection de la non-conformité",
+                "Survenue de la non-conformité",
+                "Détection et survenue de la non-conformité",
+                "Autre maillon de la chaine de distribution",
+                "Autre : préciser"
+            ]
+        }
+    }
 }
